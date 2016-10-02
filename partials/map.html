@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> -->
+<!-- 	<link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
+ 		<link rel="stylesheet" href="../css/index.css" /> -->
+	
+
+</head>
+<body>
+ <div id="mapid"></div>
+<!-- <script src="../js/map.js"></script>
+ -->
+<div class="modal fade" id="form-content"  role="dialog"  aria-hidden="true" >
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="thumbnail">
+<!--     	<img src="{{planCtrl.img}}">
+ -->    	<div class="caption">
+            <h3>{{mapCtrl.weatherInfo.name}}</h3>
+			<p> {{mapCtrl.weatherInfo.weather[0].description}}</p>
+            <p> Couverture nuageuse : {{mapCtrl.weatherInfo.clouds.all}}</p>
+            <p> Humidité : {{mapCtrl.weatherInfo.main.humidity}}</p>
+            <p> température : {{mapCtrl.weatherInfo.main.temp}}</p>
+            <p> température minimale : {{mapCtrl.weatherInfo.main.temp_min}}</p>
+            <p> température maximale : {{mapCtrl.weatherInfo.main.temp_max}}</p>
+            <p> Couverture nuageuse : {{mapCtrl.weatherInfo.clouds.all}}</p>
+            <p> Couverture nuageuse : {{mapCtrl.weatherInfo.clouds.all}}</p>
+            <p> Couverture nuageuse : {{mapCtrl.weatherInfo.clouds.all}}</p>
+            <p>
+                <!-- <a href="geo:Parc des princes, Paris?q=Parc des princes, Paris" class="btn btn-primary" role="button">Allez à la navigation</a> -->
+                <a class="btn btn-default closeModal" role="button" data-dismiss="modal">Fermer</a>
+            </p>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+ </body>
+</html>
