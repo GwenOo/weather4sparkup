@@ -9,10 +9,10 @@
 	<link rel="stylesheet" href="css/index.css" />
 	<link rel="stylesheet" href="css/nav.css" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"/>
-	<link rel="stylesheet" type="text/css" href="node_modules/ng-twitter/dist/ng-twitter.min.css">
-	<script src="node_modules/angular/angular.js"></script>
-		<script type="text/javascript" src="node_modules/angular-sanitize/angular-sanitize.min.js"></script>
-		<script type="text/javascript" src="node_modules/ng-twitter/dist/ng-twitter.min.js"></script>
+<!-- 	<link rel="stylesheet" type="text/css" href="node_modules/ng-twitter/dist/ng-twitter.min.css">
+ -->	<script src="node_modules/angular/angular.js"></script>
+<!-- 		<script type="text/javascript" src="node_modules/angular-sanitize/angular-sanitize.min.js"></script>
+		<script type="text/javascript" src="node_modules/ng-twitter/dist/ng-twitter.min.js"></script> -->
 		<script src="node_modules/ngtweet/dist/ngtweet.min.js"></script>
   	<script src="node_modules/angular-route/angular-route.js"></script>
   	<script src="node_modules/angular-resource/angular-resource.js"></script>
@@ -31,8 +31,9 @@
     <nav class="navbar navbar-default">
     <div class="">
         <ul class="nav navbar-nav navbar-left">
-            <li class=""><a href="#/map" ><i class="fa fa-sun-o"></i></a></li>
-            <li class=""><a href="#/more" ><i class="fa fa-globe"></i></a></li>
+        longitude : {{mapCtrl.visitorLatitude}}
+            <!-- <li class=""><a href="#/map" ><i class="fa fa-sun-o"></i></a></li>
+            <li class=""><a href="#/more" ><i class="fa fa-globe"></i></a></li> -->
 <!--             <li class="arround-icon"><a href="#/main" ><i class="cy-main"></i></a></li>
  -->        </ul>
     </div>

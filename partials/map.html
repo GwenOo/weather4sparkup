@@ -14,31 +14,16 @@
  <div id="mapid"></div>
 <!-- <script src="../js/map.js"></script>
  -->
-<div class="modal fade" id="form-content"  role="dialog"  aria-hidden="true" >
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="thumbnail">
-<!--     	<img src="{{planCtrl.img}}">
- -->    	<div class="caption">
-            <h3>{{mapCtrl.weatherInfo.name}}</h3>
-			<p> {{mapCtrl.weatherInfo.weather[0].description}}</p>
-            <p> Couverture nuageuse : {{mapCtrl.weatherInfo.clouds.all}}</p>
-            <p> Humidité : {{mapCtrl.weatherInfo.main.humidity}}</p>
-            <p> température : {{mapCtrl.weatherInfo.main.temp}}</p>
-            <p> température minimale : {{mapCtrl.weatherInfo.main.temp_min}}</p>
-            <p> température maximale : {{mapCtrl.weatherInfo.main.temp_max}}</p>
-            <p> Couverture nuageuse : {{mapCtrl.weatherInfo.clouds.all}}</p>
-            <p> Couverture nuageuse : {{mapCtrl.weatherInfo.clouds.all}}</p>
-            <p> Couverture nuageuse : {{mapCtrl.weatherInfo.clouds.all}}</p>
-            <p>
-                <!-- <a href="geo:Parc des princes, Paris?q=Parc des princes, Paris" class="btn btn-primary" role="button">Allez à la navigation</a> -->
-                <a class="btn btn-default closeModal" role="button" data-dismiss="modal">Fermer</a>
-            </p>
-          </div>
-      </div>
-    </div>
-  </div>
-</div>
+<!-- <twitter-timeline>
+                <a class="twitter-timeline" data-widget-id={{moreCtrl.currentwid}}>Tweets sur #Meteo {{moreCtrl.weatherInfo.name}}</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                        <a class="twitter-timeline" data-widget-id="782417789470511104"></a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+          
+<twitter-timeline> -->
+<!-- <twitter-widget twitter-widget-id="'782417789470511104'"
+                twitter-widget-options="{'cards': 'hidden', 'align': 'right'}">
+</twitter-widget> -->
 
  </body>
 </html>

@@ -10,6 +10,14 @@ w4sController.controller('W4sMapCtrl',['GetParis','sharedProperties',function(Ge
 		vm.bindCities(vm.getparis.list)
 	});
 
+    if (navigator.geolocation) {
+        navigator.geolocation.watchPosition(showPosition);
+
+	}
+	function showPosition(position) {
+    vm.visitorLatitude = position.coords.latitude;
+    vm.visitorLongitude = position.coords.longitude; 
+	}
 
 	/*GetParis.list(function(GetParis){
 		vm.getparis = GetParis;
@@ -19,7 +27,6 @@ w4sController.controller('W4sMapCtrl',['GetParis','sharedProperties',function(Ge
 
 	vm.bindCities = function(list) {
 
-		console.log(list);
 		var frmap = L.map('mapid').setView([46.805, 1.09], 5.5);
 		L.tileLayer('https://api.mapbox.com/styles/v1/gwengpn/citqbd1so00002imfcx9lulhz/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiZ3dlbmdwbiIsImEiOiJjaXRxYjd1cHkwMDA3Mm9xd2NhaHNzczkxIn0.0yR2mVXQIEIG4ybr-vuI3Q', {
 	    maxZoom: 6,
@@ -50,7 +57,6 @@ w4sController.controller('W4sMapCtrl',['GetParis','sharedProperties',function(Ge
 			    //vm.bindModal(id);
 			    //vm.weatherInfo = vm.getparis.list[id];
 			    //$('#modal'-' + this.options.id').modal('show');
-			    console.log('yoooo');
 				// Add marker to map
 			})
 			.addTo(frmap);//.bindPopup(current.name +':'+ current.main.temp+'°');
