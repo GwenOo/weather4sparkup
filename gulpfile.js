@@ -7,6 +7,7 @@ gulp.task('webserver', function() {
     .pipe(webserver({
       fallback: 'index.html',
       host: '0.0.0.0',
+      https: false,
       port: process.env.PORT || 5000,
       open: true
     }));
