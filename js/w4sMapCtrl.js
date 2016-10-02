@@ -3,10 +3,8 @@ var w4sController = angular.module('w4sMapCtrl',['ngtweet']);
 
 w4sController.controller('W4sMapCtrl',['GetParis','sharedProperties',function(GetParis,sharedProperties){
 	var vm = this;
-	//vm.getparis = GetParis.list();
 	vm.gp = GetParis.list(function(GetParis){
 		vm.getparis = GetParis;
-		console.log(vm.getparis.list);
 		vm.bindCities(vm.getparis.list)
 	});
 
@@ -18,12 +16,6 @@ w4sController.controller('W4sMapCtrl',['GetParis','sharedProperties',function(Ge
     vm.visitorLatitude = position.coords.latitude;
     vm.visitorLongitude = position.coords.longitude; 
 	}
-
-	/*GetParis.list(function(GetParis){
-		vm.getparis = GetParis;
-		console.log(vm.getparis.list);
-		bindCities(vm.getparis.list)
-	})*/
 
 	vm.bindCities = function(list) {
 
@@ -43,7 +35,6 @@ w4sController.controller('W4sMapCtrl',['GetParis','sharedProperties',function(Ge
 		});
 		for(i in list){
 			current = list[i];
-			//vm.weatherInfo = weatherInfo;;
 			L.marker([current.coord.lat, current.coord.lon], {icon: new WeatherIcon({iconUrl: 'http://openweathermap.org/img/w/'+current.weather[0].icon+'.png',className:'current&'+i})})
 			.on('click', function (e) {
 
@@ -51,18 +42,11 @@ w4sController.controller('W4sMapCtrl',['GetParis','sharedProperties',function(Ge
 			    var id = Number(cl.substring(cl.indexOf("&")+1,cl.indexOf("&")+3));
 			    vm.weatherInfo = vm.getparis.list[id];
 			    sharedProperties.setProperty(vm.weatherInfo);
-
 			    document.location.href = '#/more';
 
-			    //vm.bindModal(id);
-			    //vm.weatherInfo = vm.getparis.list[id];
-			    //$('#modal'-' + this.options.id').modal('show');
-				// Add marker to map
 			})
-			.addTo(frmap);//.bindPopup(current.name +':'+ current.main.temp+'°');
-
+			.addTo(frmap);
 		}
 	}
-
 }])
 
