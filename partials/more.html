@@ -13,6 +13,7 @@
     <h3 class="panel-title">{{moreCtrl.weatherInfo.name}}</h3>
   </div>
   <div class="panel-body">
+  		{{moreCtrl.currentwid}}
 		<p> {{moreCtrl.weatherInfo.weather[0].description}}</p>
         <p> Couverture nuageuse : {{moreCtrl.weatherInfo.clouds.all}}</p>
         <p> Humidité : {{moreCtrl.weatherInfo.main.humidity}}%</p>
@@ -24,6 +25,10 @@
         <p> Couverture nuageuse : {{moreCtrl.weatherInfo.clouds.all}}</p> -->
   </div>
 </div>
-<div tweets hashtag="moreCtrl.hashtag" button="true" count="15"/>
+<twitter-timeline>
+                <a class="twitter-timeline" data-widget-id={{moreCtrl.currentwid}}>Tweets sur #Meteo {{moreCtrl.weatherInfo.name}}</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<twitter-timeline>
+
 </body>
 </html>
